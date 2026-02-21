@@ -294,7 +294,7 @@
     }
 
     .nav-logo-img {
-     height: 60px;
+     height: 100px;
     width: auto;
       object-fit: contain;   
       display: block
@@ -2358,7 +2358,10 @@
       }
 
       .nav-logo-img {
-        height: 42px
+        height: 120px;
+        width: auto;
+        object-fit: contain;
+
       }
 
       /* Hero — fully stacked */
@@ -2727,7 +2730,7 @@
 ═══════════════════════════ */
     @media(max-width:480px) {
       .container {
-        padding: 0 16px
+        padding: 0 12px 0 0;
       }
 
       .section {
