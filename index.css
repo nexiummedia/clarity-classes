@@ -166,6 +166,7 @@
       box-shadow: 0 4px 18px rgba(232, 184, 75, .45)
     }
 
+
     .btn-primary:hover {
       background: var(--yellow-dark);
       transform: translateY(-2px);
@@ -257,6 +258,18 @@
       font-weight: 700
     }
 
+    .quality-wrap{
+    }
+
+
+    .quality{
+      border-radius: 8px;
+      /* transform: rotate(-90deg);
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      border-radius: 8px; */
+    }
     .topbar .wa-lnk:hover {
       color: #86efac !important
     }
@@ -2180,7 +2193,7 @@
     .sticky-mob-inner .btn {
       flex: 1;
       font-size: 13px;
-      padding: 12px 6px;
+      padding: 16px 6px;
       border-radius: var(--r-sm)
     }
 
@@ -2729,9 +2742,17 @@
    SMALL PHONE ≤480
 ═══════════════════════════ */
     @media(max-width:480px) {
+     
       .container {
         padding: 0 16px
       }
+      .quality{
+      /* transform: rotate(-90deg);
+      width: 800px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px; */
+    }
       .nav-logo-img{
        height: 145px;
        width: auto;
