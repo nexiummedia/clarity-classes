@@ -2358,7 +2358,7 @@
       }
 
       .nav-logo-img {
-        height: 120px;
+        height: 90px;
         width: auto;
         object-fit: contain;
 
@@ -2730,7 +2730,7 @@
 ═══════════════════════════ */
     @media(max-width:480px) {
       .container {
-        padding: 0 12px 0 0;
+        padding: 0 16px
       }
 
       .section {
