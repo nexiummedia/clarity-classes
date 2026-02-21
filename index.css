@@ -661,41 +661,59 @@
     /* ── TRUST BAR ── */
     .trust-bar {
       background: linear-gradient(90deg, var(--yellow), #d4a83e);
-      padding: 17px 0
+      padding: 14px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
     }
-
-    .trust-bar .inner {
+    
+    .marquee-track {
+      display: flex;
+      width: fit-content;
+    }
+    
+    .marquee-inner {
       display: flex;
       align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 8px 32px
+      gap: 32px;
+      animation: marquee 30s linear infinite;
+      padding-right: 32px;
     }
-
-    .ti {
+    
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    
+    .trust-bar .ti {
       display: flex;
       align-items: center;
-      gap: 10px
+      gap: 10px;
+      flex-shrink: 0;
     }
-
-    .ti i {
-      font-size: 18px;
+    
+    .trust-bar .ti i {
+      font-size: 16px;
       color: var(--blue-dark);
-      flex-shrink: 0
     }
-
-    .ti p {
+    
+    .trust-bar .ti p {
       font-family: 'Baloo 2', cursive;
       font-weight: 700;
       font-size: 14px;
-      color: var(--blue-dark)
+      color: var(--blue-dark);
+      margin: 0;
+    }
+    
+    .trust-bar .t-bar-sep {
+      width: 1px;
+      height: 20px;
+      background: rgba(21, 45, 96, .22);
+      flex-shrink: 0;
     }
 
-    .t-bar-sep {
-      width: 1px;
-      height: 24px;
-      background: rgba(21, 45, 96, .22);
-      flex-shrink: 0
+    .trust-bar:hover .marquee-inner {
+      animation-play-state: paused;
     }
 
     /* ── ABOUT ── */
@@ -2425,16 +2443,8 @@
         padding: 14px
       }
 
-      /* Trust bar */
-      .trust-bar .inner {
-        gap: 6px 14px
-      }
-
-      .t-bar-sep {
-        display: none
-      }
-
-      .ti p {
+      /* Trust bar marquee items */
+      .trust-bar .ti p {
         font-size: 13px
       }
 
@@ -2804,10 +2814,6 @@
 
       .founder-card {
         padding: 20px 16px
-      }
-
-      .trust-bar .inner {
-        gap: 4px 12px
       }
 
       .sec-title {
