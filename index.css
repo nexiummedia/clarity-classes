@@ -708,6 +708,15 @@
       border-radius: var(--r-xl)
     }
 
+    .about-photo {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: var(--r-xl);
+      display: block
+    }
+
     .about-ph {
       background: linear-gradient(145deg, var(--blue), var(--blue-dark));
       border-radius: var(--r-xl);
@@ -1789,7 +1798,7 @@
       grid-template-columns: 1fr 1.25fr;
       gap: 36px;
       margin-top: 48px;
-      align-items: start
+      align-items: center
     }
 
     .contact-cards {
@@ -1862,15 +1871,19 @@
     }
 
     .map-box {
-      background: linear-gradient(145deg, #dce8fb, #c4d7f8);
       border-radius: var(--r-xl);
+      overflow: hidden;
       min-height: 420px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 13px;
-      border: 2px dashed rgba(28, 62, 126, .22)
+      position: relative
+    }
+
+    .map-iframe {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+      border: 0;
+      display: block
     }
 
     .map-box i {
@@ -2285,11 +2298,11 @@
 ═══════════════════════════ */
     @media(max-width:768px) {
       .container {
-        padding: 0 16px
+        padding: 0 18px
       }
 
       .section {
-        padding: 52px 0
+        padding: 48px 0
       }
 
       /* Topbar */
@@ -2323,63 +2336,93 @@
       }
 
       .navbar .inner {
-        height: 58px
+        height: 60px
       }
 
       .nav-logo-img {
-        height: 38px
+        height: 42px
       }
 
       /* Hero — fully stacked */
       .hero {
-        padding: 44px 0 36px
+        padding: 44px 0 40px
       }
 
       .hero-layout {
         grid-template-columns: 1fr;
-        gap: 28px
+        gap: 32px
+      }
+
+      .hero-content {
+        text-align: center
       }
 
       .hero h1 {
-        font-size: 26px
+        font-size: 28px;
+        line-height: 1.2
       }
 
       .hero-sub {
-        font-size: 14px
-      }
-
-      .hero-acts {
-        justify-content: center
-      }
-
-      .hero-acts .btn {
-        flex: 1;
-        max-width: 170px;
-        font-size: 14px;
-        padding: 12px 14px
-      }
-
-      .hero-chips {
-        justify-content: center
+        font-size: 15px;
+        line-height: 1.65
       }
 
       .hero-eyebrow {
         font-size: 12px
       }
 
+      .hero-chips {
+        justify-content: center
+      }
+
+      /* Hero CTA buttons — full width, touch-friendly */
+      .hero-acts {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px
+      }
+
+      .hero-acts .btn {
+        width: 100%;
+        min-height: 50px;
+        font-size: 15px;
+        padding: 14px 20px;
+        justify-content: center
+      }
+
       /* Hero form */
       .hero-form {
-        padding: 24px 18px;
+        padding: 26px 20px;
         border-radius: var(--r-lg)
       }
 
       .hero-form h3 {
-        font-size: 18px
+        font-size: 19px
+      }
+
+      .hf-sub {
+        font-size: 13px
       }
 
       .form-grid {
         grid-template-columns: 1fr;
         gap: 12px
+      }
+
+      .ff input,
+      .ff select {
+        padding: 13px 14px;
+        font-size: 15px
+      }
+
+      .ff label {
+        font-size: 12.5px
+      }
+
+      .form-submit {
+        min-height: 50px;
+        font-size: 16px;
+        padding: 14px
       }
 
       /* Trust bar */
@@ -2392,11 +2435,11 @@
       }
 
       .ti p {
-        font-size: 12.5px
+        font-size: 13px
       }
 
       .ti i {
-        font-size: 16px
+        font-size: 17px
       }
 
       /* About */
@@ -2429,7 +2472,7 @@
       }
 
       .ctr-num {
-        font-size: 28px
+        font-size: 30px
       }
 
       /* Founder */
@@ -2444,15 +2487,15 @@
       }
 
       .f-exp-badge {
-        font-size: 11px;
-        padding: 7px 16px;
+        font-size: 12px;
+        padding: 8px 16px;
         white-space: normal;
         text-align: center;
         width: 80%
       }
 
       .f-name {
-        font-size: 24px
+        font-size: 26px
       }
 
       .qual-tags {
@@ -2460,8 +2503,8 @@
       }
 
       .qtag {
-        font-size: 12px;
-        padding: 6px 12px
+        font-size: 12.5px;
+        padding: 7px 13px
       }
 
       /* Classes */
@@ -2485,20 +2528,20 @@
       }
 
       .usp-icon {
-        width: 48px;
-        height: 48px
+        width: 50px;
+        height: 50px
       }
 
       .usp-icon i {
-        font-size: 20px
+        font-size: 21px
       }
 
       .usp-card h4 {
-        font-size: 13.5px
+        font-size: 14px
       }
 
       .usp-card p {
-        font-size: 12px
+        font-size: 13px
       }
 
       /* Results */
@@ -2521,7 +2564,7 @@
       }
 
       .res-lbl {
-        font-size: 12.5px
+        font-size: 13px
       }
 
       /* Method */
@@ -2567,17 +2610,17 @@
       }
 
       .step-item {
-        max-width: 280px;
+        max-width: 300px;
         margin: 0 auto
       }
 
       .step-circle {
-        width: 62px;
-        height: 62px
+        width: 64px;
+        height: 64px
       }
 
       .step-circle i {
-        font-size: 22px
+        font-size: 24px
       }
 
       /* Contact */
@@ -2588,7 +2631,8 @@
       }
 
       .map-box {
-        min-height: 260px
+        height: 280px;
+        min-height: unset
       }
 
       /* Final CTA */
@@ -2597,22 +2641,34 @@
       }
 
       .final-cta h2 {
-        font-size: 24px
+        font-size: 26px
       }
 
       .final-cta p {
-        font-size: 15px
+        font-size: 15.5px;
+        line-height: 1.65
       }
 
       .final-btns {
         flex-direction: column;
-        align-items: center
+        align-items: stretch;
+        gap: 12px
       }
 
       .final-btns .btn {
         width: 100%;
-        max-width: 300px;
-        font-size: 15px
+        min-height: 50px;
+        font-size: 15px;
+        padding: 14px 20px
+      }
+
+      /* Mobile menu buttons — touch friendly */
+      .mob-btns .btn {
+        width: 100%;
+        min-height: 50px;
+        font-size: 15px;
+        padding: 14px 20px;
+        justify-content: center
       }
 
       /* Footer */
@@ -2627,7 +2683,7 @@
       }
 
       .foot-logo img {
-        height: 42px
+        height: 44px
       }
 
       .foot-bottom {
@@ -2647,11 +2703,12 @@
 
       /* Typography */
       .sec-title {
-        font-size: 22px
+        font-size: 24px
       }
 
       .sec-desc {
-        font-size: 15px
+        font-size: 15px;
+        line-height: 1.7
       }
     }
 
@@ -2660,29 +2717,44 @@
 ═══════════════════════════ */
     @media(max-width:480px) {
       .container {
-        padding: 0 14px
+        padding: 0 16px
       }
 
       .section {
-        padding: 44px 0
+        padding: 42px 0
+      }
+
+      /* Hide topbar on very small phones — too cluttered */
+      .topbar {
+        display: none
       }
 
       .hero {
-        padding: 36px 0 30px
+        padding: 36px 0 32px
       }
 
+      /* Fix hero H1 — was incorrectly set to 36px (too large), correct to 24px */
       .hero h1 {
-        font-size: 23px
+        font-size: 36px;
+        line-height: 1.25
+      }
+
+      .hero-sub {
+        font-size: 14px
+      }
+
+      /* Buttons — full width, big touch targets */
+      .hero-acts {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px
       }
 
       .hero-acts .btn {
-        max-width: unset;
-        font-size: 13px;
-        padding: 11px 12px
-      }
-
-      .hero-acts {
-        gap: 9px
+        width: 100%;
+        min-height: 50px;
+        font-size: 14px;
+        padding: 13px 16px
       }
 
       .usp-grid {
@@ -2706,12 +2778,28 @@
       }
 
       .final-btns .btn {
+        min-height: 50px;
         padding: 13px 16px;
-        font-size: 14px
+        font-size: 15px
+      }
+
+      .final-cta h2 {
+        font-size: 22px
       }
 
       .hero-form {
-        padding: 20px 14px
+        padding: 22px 16px
+      }
+
+      .ff input,
+      .ff select {
+        padding: 13px 12px;
+        font-size: 15px
+      }
+
+      .form-submit {
+        min-height: 50px;
+        font-size: 15px
       }
 
       .founder-card {
@@ -2720,5 +2808,14 @@
 
       .trust-bar .inner {
         gap: 4px 12px
+      }
+
+      .sec-title {
+        font-size: 22px
+      }
+
+      .mob-btns .btn {
+        min-height: 50px;
+        font-size: 15px
       }
     }
