@@ -110,12 +110,12 @@
           <p class="hf-sub">No fees. No commitment. See the difference yourself!</p>
           <div class="form-grid">
             <div class="ff">
-              <label>Parent's Name *</label>
+              <label> Name *</label>
               <input type="text" id="parentName" placeholder="Your full name">
             </div>
             <div class="ff">
               <label>Mobile Number *</label>
-              <input type="tel" id="mobileNumber" placeholder="+91 XXXXXXXXXX">
+              <input type="tel" id="mobileNumber" placeholder="10-digit number" maxlength="10">
             </div>
           </div>
           <div class="form-grid" style="margin-top:13px;">
@@ -919,6 +919,11 @@
 
       if (!name || !mobile || !sClass) {
         alert('Please fill in all required fields.');
+        return;
+      }
+
+      if (mobile.length !== 10) {
+        alert('Please enter a valid 10-digit mobile number.');
         return;
       }
 
