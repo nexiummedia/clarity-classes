@@ -37,8 +37,7 @@
   <nav class="navbar" id="navbar">
     <div class="container inner">
       <a href="#home" class="nav-logo">
-        <img src="./assest/clarity-logo-removebg-preview.png"
-          alt="Clarity Classes" class="nav-logo-img">
+        <img src="./assest/clarity-logo-removebg-preview.png" alt="Clarity Classes" class="nav-logo-img">
       </a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
@@ -89,7 +88,7 @@
         <div class="hero-content fu">
           <div class="hero-eyebrow"><i class="fas fa-map-marker-alt"></i> Nirsa, Dhanbad's New-Age Coaching Centre</div>
           <h1>Strong Foundations.<br><span class="acc">Clear Concepts.</span><br>Real Confidence.</h1>
-          <p class="hero-sub">Concept-based coaching for KG to Class 9  CBSE, JAC &amp; ICSE boards. Personal
+          <p class="hero-sub">Concept-based coaching for KG to Class 9 CBSE, JAC &amp; ICSE boards. Personal
             attention, weekly tests &amp; structured preparation for long-term success.</p>
           <div class="hero-chips">
             <span class="chip"><i class="fas fa-users"></i> Small Batches (10–15 Max)</span>
@@ -112,17 +111,17 @@
           <div class="form-grid">
             <div class="ff">
               <label>Parent's Name *</label>
-              <input type="text" placeholder="Your full name">
+              <input type="text" id="parentName" placeholder="Your full name">
             </div>
             <div class="ff">
               <label>Mobile Number *</label>
-              <input type="tel" placeholder="+91 XXXXXXXXXX">
+              <input type="tel" id="mobileNumber" placeholder="+91 XXXXXXXXXX">
             </div>
           </div>
           <div class="form-grid" style="margin-top:13px;">
             <div class="ff">
               <label>Student's Class *</label>
-              <select>
+              <select id="studentClass">
                 <option value="">Select Class</option>
                 <optgroup label="Primary">
                   <option>KG / Nursery</option>
@@ -144,15 +143,14 @@
             </div>
             <div class="ff">
               <label>Preferred Timing</label>
-              <select>
+              <select id="preferredTiming">
                 <option>Afternoon (2–4 PM)</option>
                 <option>Evening (4–6 PM)</option>
                 <option>Evening (6–8 PM)</option>
               </select>
             </div>
           </div>
-          <button class="btn btn-primary form-submit"
-            onclick="alert('Thank you! Toushif Sir will call you within 1 hour to confirm your FREE demo class. You can also WhatsApp us at 6299921922.')">
+          <button class="btn btn-primary form-submit" onclick="sendToWhatsApp()">
             <i class="fas fa-paper-plane"></i> Book Free Demo Now
           </button>
           <p class="form-note"><i class="fab fa-whatsapp"></i> Confirmation sent on WhatsApp · 100% Free · No Obligation
@@ -226,10 +224,10 @@
       <div class="grid2">
         <div class="about-img-wrap fu">
           <!-- <div class="about-ph"> -->
-            <div class="quality-wrap">
-`
-              <img src="/assest/Class room - pic with students.png" class="quality">
-            </div>
+          <div class="quality-wrap">
+            `
+            <img src="/assest/Class room - pic with students.png" class="quality">
+          </div>
           <!-- <i class="fas fa-chalkboard-teacher"></i>
             <span>Upload Classroom Photo Here</span> -->
           <!-- </div> -->
@@ -297,18 +295,18 @@
           <p class="f-role">Founder &amp; Head Tutor</p>
           <h3 class="f-name">Toushif Hussain Sir</h3>
           <p class="f-title">BCA Graduate · Kazi Nazrul University · Maths &amp; Science Specialist</p>
-          <p>Toushif Sir started Clarity Classes with one clear mission — to make quality education <strong>simple,
+          <p>Toushif Sir started Clarity Classes with one clear mission - to make quality education <strong>simple,
               affordable, and understandable</strong> for every student in Nirsa and surrounding areas. He firmly
             believes that every student is intelligent; they just need the right guidance and clear explanations.</p>
           <p>Having noticed that many students in smaller towns develop a fear of subjects like Maths and Science purely
             because concepts aren't explained clearly enough, he set out to change that. At Clarity Classes,
-            <strong>every topic is broken down step by step</strong> into simple, relatable explanations — until the
+            <strong>every topic is broken down step by step</strong> into simple, relatable explanations - until the
             student truly understands, not just memorises.
           </p>
           <p>His goal goes beyond marks: <strong>"Education sirf marks ke liye nahi, future banane ke liye hoti
-              hai"</strong> — and his mission is to help every student reach their best version.</p>
+              hai"</strong> - and his mission is to help every student reach their best version.</p>
           <div class="f-quote">"Clarity creates confidence, and confidence creates success."<br><span
-              style="font-size:13px;font-weight:600;opacity:.7;">— Toushif Hussain, Founder</span></div>
+              style="font-size:13px;font-weight:600;opacity:.7;">- Toushif Hussain, Founder</span></div>
           <div class="qual-tags">
             <span class="qtag"><i class="fas fa-graduation-cap"></i> BCA Graduate</span>
             <span class="qtag"><i class="fas fa-university"></i> Kazi Nazrul University</span>
@@ -394,13 +392,13 @@
       <div class="sec-hdr fu">
         <div class="sec-label"><i class="fas fa-shield-alt"></i> Why Parents Choose Us</div>
         <h2 class="sec-title">What Makes Clarity Classes Different?</h2>
-        <p class="sec-desc">We don't run batches — we nurture potential. Here's how we're genuinely different.</p>
+        <p class="sec-desc">We don't run batches - we nurture potential. Here's how we're genuinely different.</p>
       </div>
       <div class="usp-grid">
         <div class="usp-card fu d1">
           <div class="usp-icon"><i class="fas fa-brain"></i></div>
           <h4>Concept-Based Teaching</h4>
-          <p>Every topic explained step by step so students truly understand — not just memorise for exams.</p>
+          <p>Every topic explained step by step so students truly understand - not just memorise for exams.</p>
         </div>
         <div class="usp-card fu d2">
           <div class="usp-icon"><i class="fas fa-language"></i></div>
@@ -410,7 +408,7 @@
         <div class="usp-card fu d3">
           <div class="usp-icon"><i class="fas fa-users"></i></div>
           <h4>Small Batches Only</h4>
-          <p>Maximum 10–15 students per batch. Toushif Sir personally teaches every class — no outsourcing.</p>
+          <p>Maximum 10–15 students per batch. Toushif Sir personally teaches every class no outsourcing.</p>
         </div>
         <div class="usp-card fu d4">
           <div class="usp-icon"><i class="fas fa-clipboard-check"></i></div>
@@ -420,22 +418,22 @@
         <div class="usp-card fu d1">
           <div class="usp-icon"><i class="fas fa-graduation-cap"></i></div>
           <h4>Board Exam Focus</h4>
-          <p>Teaching fully aligned with CBSE, JAC, and ICSE board patterns — exactly what appears in exams.</p>
+          <p>Teaching fully aligned with CBSE, JAC, and ICSE board patterns - exactly what appears in exams.</p>
         </div>
         <div class="usp-card fu d2">
           <div class="usp-icon"><i class="fab fa-whatsapp"></i></div>
           <h4>All Parent Updates</h4>
-          <p>Progress shared via WhatsApp reports, report cards, and monthly meetings — all three methods.</p>
+          <p>Progress shared via WhatsApp reports, report cards, and monthly meetings - all three methods.</p>
         </div>
         <div class="usp-card fu d3">
           <div class="usp-icon"><i class="fas fa-heart"></i></div>
           <h4>Confidence Building</h4>
-          <p>We don't just solve problems — we help students believe they can solve them independently.</p>
+          <p>We don't just solve problems - we help students believe they can solve them independently.</p>
         </div>
         <div class="usp-card fu d4">
           <div class="usp-icon"><i class="fas fa-file-alt"></i></div>
           <h4>Everything Included</h4>
-          <p>Study material, test sheets, doubt sessions, notes, previous year papers — all included in fees.</p>
+          <p>Study material, test sheets, doubt sessions, notes, previous year papers - all included in fees.</p>
         </div>
       </div>
     </div>
@@ -449,7 +447,7 @@
           style="background:rgba(232,184,75,.18);color:var(--yellow);border-color:rgba(232,184,75,.3);"><i
             class="fas fa-chart-line"></i> Early Results</div>
         <h2 class="sec-title" style="color:#fff;">Our Numbers Since Day One</h2>
-        <p class="sec-desc" style="color:rgba(255,255,255,.70);margin:0 auto;">Clarity Classes opened in 2025 — and the
+        <p class="sec-desc" style="color:rgba(255,255,255,.70);margin:0 auto;">Clarity Classes opened in 2025 - and the
           results so far show exactly what's possible.</p>
       </div>
       <div class="res-grid">
@@ -489,13 +487,13 @@
           <div class="sec-label"><i class="fas fa-lightbulb"></i> Our Approach</div>
           <h2 class="sec-title">How Toushif Sir Makes Learning Stick</h2>
           <p style="font-size:15px;color:var(--text-light);margin-bottom:24px;line-height:1.8;">Our 4-step system
-            ensures every student builds a strong foundation — not just crams for exams.</p>
+            ensures every student builds a strong foundation - not just crams for exams.</p>
           <div class="msteps">
             <div class="mstep">
               <div class="mstep-icon"><i class="fas fa-search"></i></div>
               <div>
                 <h4>Assess Each Student First</h4>
-                <p>We evaluate current level and identify gaps before starting. No generic teaching — everything is
+                <p>We evaluate current level and identify gaps before starting. No generic teaching - everything is
                   tailored.</p>
               </div>
             </div>
@@ -503,7 +501,7 @@
               <div class="mstep-icon"><i class="fas fa-lightbulb"></i></div>
               <div>
                 <h4>Concept-First Explanation</h4>
-                <p>Topics explained through real-world examples in simple language — until genuine understanding is
+                <p>Topics explained through real-world examples in simple language - until genuine understanding is
                   achieved.</p>
               </div>
             </div>
@@ -519,7 +517,7 @@
               <div class="mstep-icon"><i class="fas fa-chart-bar"></i></div>
               <div>
                 <h4>Track Progress &amp; Report</h4>
-                <p>Performance reports shared with parents every month — with specific, actionable suggestions to
+                <p>Performance reports shared with parents every month - with specific, actionable suggestions to
                   improve.</p>
               </div>
             </div>
@@ -540,12 +538,12 @@
       <div class="testi-grid">
         <div class="testi-card fu d1">
           <div class="t-stars">★★★★★</div>
-          <p class="t-quote">"Maths mein bilkul samajh nahi aata tha — lekin Toushif Sir ke padhane ke baad concept
+          <p class="t-quote">"Maths mein bilkul samajh nahi aata tha - lekin Toushif Sir ke padhane ke baad concept
             clear ho gaya. Ab khud se solve karta hoon. Bahut achha padhate hain."</p>
           <div class="t-footer">
             <div class="t-avatar"><i class="fas fa-user-graduate"></i></div>
             <div>
-              <div class="t-name">Student — Class 8</div>
+              <div class="t-name">Student - Class 8</div>
               <div class="t-role">Nirsa, Dhanbad</div>
             </div>
           </div>
@@ -564,7 +562,7 @@
         </div>
         <div class="testi-card fu d3">
           <div class="t-stars">★★★★★</div>
-          <p class="t-quote">"Weekly tests bahut helpful hain — pata chalta rehta hai ki bachha kahan hai. Progress
+          <p class="t-quote">"Weekly tests bahut helpful hain - pata chalta rehta hai ki bachha kahan hai. Progress
             report bhi WhatsApp pe milti hai. Bahut professional approach hai."</p>
           <div class="t-footer">
             <div class="t-avatar"><i class="fas fa-user"></i></div>
@@ -576,7 +574,7 @@
         </div>
       </div>
       <div class="coming-soon-note fu">
-        <p>📸 More testimonials coming soon — we are growing fast!</p>
+        <p>📸 More testimonials coming soon - we are growing fast!</p>
         <small>Have something to say? WhatsApp us at 6299921922 and share your experience.</small>
       </div>
       <!-- Video Testimonials -->
@@ -590,7 +588,7 @@
               <p class="vid-lbl">Student Video Testimonial 1</p>
             </div>
             <div class="vid-foot">
-              <p>Student — Class 9</p><small>Add your YouTube link here</small>
+              <p>Student - Class 9</p><small>Add your YouTube link here</small>
             </div>
           </div>
           <div class="vid-card">
@@ -599,7 +597,7 @@
               <p class="vid-lbl">Student Video Testimonial 2</p>
             </div>
             <div class="vid-foot">
-              <p>Student — Class 7</p><small>Add your YouTube link here</small>
+              <p>Student - Class 7</p><small>Add your YouTube link here</small>
             </div>
           </div>
           <div class="vid-card">
@@ -662,7 +660,7 @@
       <div class="sec-hdr fu">
         <div class="sec-label"><i class="fas fa-clipboard-list"></i> Admission Process</div>
         <h2 class="sec-title">Join in 4 Simple Steps</h2>
-        <p class="sec-desc">Admission is completely free. From first call to first class — less than 48 hours.</p>
+        <p class="sec-desc">Admission is completely free. From first call to first class - less than 48 hours.</p>
       </div>
       <div class="steps-row fu" style="position:relative;">
         <div class="steps-connector"></div>
@@ -680,7 +678,7 @@
             <div class="step-nbadge">2</div>
           </div>
           <h4>Free Demo Class</h4>
-          <p>Your child attends a live class absolutely free — no payment, no pressure. Let them experience it first.
+          <p>Your child attends a live class absolutely free - no payment, no pressure. Let them experience it first.
           </p>
         </div>
         <div class="step-item">
@@ -711,7 +709,7 @@
       <div class="sec-hdr fu">
         <div class="sec-label"><i class="fas fa-map-marker-alt"></i> Find Us</div>
         <h2 class="sec-title">Visit Clarity Classes, Nirsa</h2>
-        <p class="sec-desc">Located in Brindabanpur — easily accessible from Nirsa, Hirbandh, and Mugma.</p>
+        <p class="sec-desc">Located in Brindabanpur - easily accessible from Nirsa, Hirbandh, and Mugma.</p>
       </div>
       <div class="contact-layout">
         <div class="contact-cards fu">
@@ -739,7 +737,7 @@
             <div class="cc-icon wa"><i class="fab fa-whatsapp"></i></div>
             <div class="cc-info">
               <h4>WhatsApp Toushif Sir</h4>
-              <p>Quick enquiries, demo booking, fees info — we respond fast on WhatsApp!</p>
+              <p>Quick enquiries, demo booking, fees info - we respond fast on WhatsApp!</p>
               <a href="https://wa.me/916299921922" class="btn btn-wa btn-sm"
                 style="margin-top:10px;border-radius:var(--r-sm); color:white"><i class="fab fa-whatsapp"></i> Chat on
                 WhatsApp</a>
@@ -749,7 +747,7 @@
             <div class="cc-icon"><i class="fas fa-clock"></i></div>
             <div class="cc-info">
               <h4>Centre Timings</h4>
-              <p><strong>Monday – Saturday:</strong> 2:00 PM – 8:00 PM<br><strong>Sunday:</strong> Select Sundays — 8:00
+              <p><strong>Monday – Saturday:</strong> 2:00 PM – 8:00 PM<br><strong>Sunday:</strong> Select Sundays - 8:00
                 AM to 8:00 PM<br><strong>Email:</strong> <a
                   href="mailto:clarityclasses439@gmail.com">clarityclasses439@gmail.com</a></p>
             </div>
@@ -768,7 +766,7 @@
   <section class="final-cta" id="enroll">
     <div class="container final-inner">
       <div class="scar-pill fu">
-        <div class="live-dot"></div> New Batches Starting Soon — Limited Seats!
+        <div class="live-dot"></div> New Batches Starting Soon - Limited Seats!
       </div>
       <h2 class="fu d1">Give Your Child the Foundation<br>They Deserve</h2>
       <p class="fu d2">Admission is 100% free. The demo class is free. Your child's success starts today.</p>
@@ -912,7 +910,36 @@
         });
       }, { threshold: 0.4 }).observe(s);
     });
+    // WhatsApp Redirection
+    function sendToWhatsApp() {
+      const name = document.getElementById('parentName').value;
+      const mobile = document.getElementById('mobileNumber').value;
+      const sClass = document.getElementById('studentClass').value;
+      const timing = document.getElementById('preferredTiming').value;
+
+      if (!name || !mobile || !sClass) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+
+      const message = `Hello Clarity Classes! I want to book a FREE demo class.\n\n` +
+        `*Parent Name:* ${name}\n` +
+        `*Mobile Number:* ${mobile}\n` +
+        `*Student Class:* ${sClass}\n` +
+        `*Preferred Timing:* ${timing}`;
+
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/916299921922?text=${encodedMessage}`;
+
+      window.open(whatsappUrl, '_blank');
+
+      // Clear form inputs
+      document.getElementById('parentName').value = '';
+      document.getElementById('mobileNumber').value = '';
+      document.getElementById('studentClass').value = '';
+      document.getElementById('preferredTiming').selectedIndex = 0;
+    }
   </script>
 </body>
 
-</html> 
+</html>
