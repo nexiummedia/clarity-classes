@@ -2732,6 +2732,11 @@
       .container {
         padding: 0 16px
       }
+      .nav-logo-img{
+       height: 120px;
+       width: auto;
+       margin-left: -32px;
+      }
 
       .section {
         padding: 42px 0
