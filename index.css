@@ -299,11 +299,8 @@
     }
 
     .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 0;
-      flex-shrink: 0;
-      text-decoration: none
+       width: 100px;
+       margin-bottom: 8px;
     }
 
     .nav-logo-img {
